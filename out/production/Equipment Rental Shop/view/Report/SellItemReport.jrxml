@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SellItemReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="25197b75-afc8-410f-b272-295d696101a6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="HireUs"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<style name="Table_TH" mode="Opaque" backcolor="#73B0E6">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="rgba(118, 176, 59, 0.48235294)">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TH" mode="Opaque" backcolor="#73B0E6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#DCEBF8"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table 3_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#E3EBF2"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table 4_TH" mode="Opaque" backcolor="rgba(118, 176, 59, 0.48235294)">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 5_TH" mode="Opaque" backcolor="rgba(118, 176, 59, 0.48235294)">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 5_CH" mode="Opaque" backcolor="rgba(113, 168, 56, 0.49019608)">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 5_TD" mode="Opaque" backcolor="rgba(191, 225, 255, 0.43137255)">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#46AACF"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 8_CH" mode="Opaque" backcolor="rgba(118, 176, 59, 0.98039216)">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 8_TD" mode="Opaque" backcolor="rgba(118, 176, 59, 0.47058824)">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="rgba(118, 176, 59, 0.6862745)"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="Dataset1" uuid="aa08fdb2-4e33-4f09-b7ea-2e6a03e23acf">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="HireUs"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT i.ItemId,i.Description,m.ModelName,c.CategoryName,i.QtyOnHand,i.Discount,i.UnitPrice
+FROM ((Item i INNER JOIN Category c ON i.CategoryId = c.CategoryId)
+INNER JOIN BrandModel m ON i.ModelId = m.ModelId);]]>
+		</queryString>
+		<field name="ItemId" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="ItemId"/>
+			<property name="com.jaspersoft.studio.field.label" value="ItemId"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Description" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="Description"/>
+			<property name="com.jaspersoft.studio.field.label" value="Description"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="ModelName" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="ModelName"/>
+			<property name="com.jaspersoft.studio.field.label" value="ModelName"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="brandmodel"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="CategoryName" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="CategoryName"/>
+			<property name="com.jaspersoft.studio.field.label" value="CategoryName"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="category"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="QtyOnHand" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="QtyOnHand"/>
+			<property name="com.jaspersoft.studio.field.label" value="QtyOnHand"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Discount" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="Discount"/>
+			<property name="com.jaspersoft.studio.field.label" value="Discount"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="UnitPrice" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="UnitPrice"/>
+			<property name="com.jaspersoft.studio.field.label" value="UnitPrice"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<group name="ItemId">
+			<groupExpression><![CDATA[$F{ItemId}]]></groupExpression>
+		</group>
+		<group name="Description">
+			<groupExpression><![CDATA[$F{Description}]]></groupExpression>
+		</group>
+		<group name="ModelName">
+			<groupExpression><![CDATA[$F{ModelName}]]></groupExpression>
+		</group>
+		<group name="CategoryName">
+			<groupExpression><![CDATA[$F{CategoryName}]]></groupExpression>
+		</group>
+		<group name="QtyOnHand">
+			<groupExpression><![CDATA[$F{QtyOnHand}]]></groupExpression>
+		</group>
+		<group name="Discount">
+			<groupExpression><![CDATA[$F{Discount}]]></groupExpression>
+		</group>
+		<group name="UnitPrice">
+			<groupExpression><![CDATA[$F{UnitPrice}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT i.ItemId,i.Description,m.ModelName,c.CategoryName,i.QtyOnHand,i.Discount,i.UnitPrice, IFNULL(od.OrderQty,0) AS OrderQty
+FROM (((Item i 
+INNER JOIN Category c ON i.CategoryId = c.CategoryId)
+INNER JOIN BrandModel m ON i.ModelId = m.ModelId)
+left JOIN orderDetail od ON i.ItemId=od.itemId)group by od.itemId;]]>
+	</queryString>
+	<field name="ItemId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ItemId"/>
+		<property name="com.jaspersoft.studio.field.label" value="ItemId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Description"/>
+		<property name="com.jaspersoft.studio.field.label" value="Description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ModelName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ModelName"/>
+		<property name="com.jaspersoft.studio.field.label" value="ModelName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="brandmodel"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CategoryName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CategoryName"/>
+		<property name="com.jaspersoft.studio.field.label" value="CategoryName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="category"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="QtyOnHand" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="QtyOnHand"/>
+		<property name="com.jaspersoft.studio.field.label" value="QtyOnHand"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Discount" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="Discount"/>
+		<property name="com.jaspersoft.studio.field.label" value="Discount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="UnitPrice" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="UnitPrice"/>
+		<property name="com.jaspersoft.studio.field.label" value="UnitPrice"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OrderQty" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="OrderQty"/>
+		<property name="com.jaspersoft.studio.field.label" value="OrderQty"/>
+	</field>
+	<title>
+		<band height="115" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="51" width="555" height="30" forecolor="#3B3939" uuid="b0aa3144-ee3e-4d78-a3bf-7ef7dcb1ef20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto Black" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SELLING ITEM REPORT]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="314" y="82" width="110" height="30" uuid="64b45cff-37bc-4524-a6bb-9f5e72de943b"/>
+				<textElement textAlignment="Left">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="154" y="82" width="155" height="30" uuid="14b643c7-c0f2-4b8f-aa57-cfe479a3a375"/>
+				<textElement textAlignment="Right">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="2" width="555" height="47" uuid="72e19e21-717c-45b8-9c01-a8addb29ccae"/>
+				<imageExpression><![CDATA["D:/IJSE/Projects/coursework/Equipment Rental Shop/src/assets/img/If .png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="555" height="70" uuid="de8f54bb-6698-405d-8bcc-98e9edf27414">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 8_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 8_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 8_TD"/>
+					<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+					<property name="com.jaspersoft.studio.components.autoresize.next" value="true"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="08eab8f5-b89d-41aa-a7ae-08caed003cb9">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="80" uuid="8c5c63b3-4282-4673-942f-9cce90228f4f">
+						<jr:columnHeader style="Table 8_CH" height="39">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="39" forecolor="#FFFFFF" uuid="fcfa8010-6f44-4869-a852-2b244308b4a5"/>
+								<box leftPadding="10"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="Roboto Black" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Item ID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 8_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" forecolor="#030303" uuid="0bdbd75b-bbed-4f73-aa37-585af6696eb0"/>
+								<box leftPadding="10"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="Roboto" size="10" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ItemId}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="f2b3cd6a-9261-409b-ab1f-0098a73b772f">
+						<jr:columnHeader style="Table 8_CH" height="39">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="39" forecolor="#FFFFFF" uuid="942dd84e-155a-469e-bb2b-33eb1c5fd03a"/>
+								<box leftPadding="5"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="Roboto Black" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Description]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 8_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" forecolor="#030303" uuid="c36c8e6e-36a0-410a-8c5b-68f0b716368d"/>
+								<box leftPadding="5"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="Roboto" size="10" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="1fe741bc-a402-4915-a636-cfe9fc02669e">
+						<jr:columnHeader style="Table 8_CH" height="39">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="39" forecolor="#FFFFFF" uuid="4fa130c4-78a4-4dd8-be2a-6e84b9c986ad"/>
+								<box leftPadding="5"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="Roboto Black" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Model Name]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 8_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" forecolor="#030303" uuid="ad589c83-32d4-4761-be0a-7643cf90f516"/>
+								<box leftPadding="5"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="Roboto" size="10" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ModelName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="79" uuid="adacb85c-ba3f-4699-8101-ce1301b2fe9c">
+						<jr:columnHeader style="Table 8_CH" height="39">
+							<staticText>
+								<reportElement x="0" y="0" width="79" height="39" forecolor="#FFFFFF" uuid="964b5c3d-5612-4a71-918c-a934c5de8b66"/>
+								<box leftPadding="5"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="Roboto Black" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Category
+Name]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 8_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="79" height="30" forecolor="#030303" uuid="73ba0eec-60c6-44e0-b0ea-197f31e55f14"/>
+								<box leftPadding="5"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="Roboto" size="10" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{CategoryName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="61" uuid="83bd0933-c269-4537-b51f-2bcbd3c43882">
+						<jr:columnHeader style="Table 8_CH" height="39">
+							<staticText>
+								<reportElement x="0" y="0" width="61" height="39" forecolor="#FFFFFF" uuid="f53aed97-c497-4f39-98b5-67f01c4d920e"/>
+								<box leftPadding="10"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Roboto Black" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Qty On  Hand]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 8_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="61" height="30" forecolor="#030303" uuid="72a9861b-70d5-470b-9e53-45309136c6ad"/>
+								<box leftPadding="0" rightPadding="10"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="Roboto" size="10" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{QtyOnHand}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="f45e2bfa-fafa-4e22-9891-4228d799a81c">
+						<jr:columnHeader style="Table 8_CH" height="39">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="39" forecolor="#FFFFFF" uuid="b942354d-1ee5-4b33-b45a-e97db5c8269f"/>
+								<box leftPadding="0" rightPadding="10"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="Roboto Black" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Discount]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 8_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" forecolor="#030303" uuid="5568b096-359a-4b7e-82b7-8c102c52a902"/>
+								<box leftPadding="0" rightPadding="10"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="Roboto" size="10" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{Discount}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="85" uuid="f3ee6a48-b805-4984-8bda-89467adb83ab">
+						<jr:columnHeader style="Table 8_CH" height="39">
+							<staticText>
+								<reportElement x="0" y="0" width="85" height="39" forecolor="#FFFFFF" uuid="2eb80791-004a-4897-898b-504375431995"/>
+								<box leftPadding="0" rightPadding="10"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="Roboto Black" isBold="false"/>
+								</textElement>
+								<text><![CDATA[Unit Price]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 8_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="85" height="30" forecolor="#030303" uuid="2c955335-51d3-4362-b620-61173d285a95"/>
+								<box leftPadding="0" rightPadding="10"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="Roboto" size="10" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{UnitPrice}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="10">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="10" uuid="8a822e9f-595f-4ba5-b759-b27f811de181"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="8"/>
+				</textElement>
+				<text><![CDATA[© 2021 - 2021 Helitha Sri - All Rights Reserved.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

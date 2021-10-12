@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="adminStackPane" prefHeight="1020.0" prefWidth="1920.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserDashBoardFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox alignment="CENTER" prefHeight="1020.0" prefWidth="290.0" spacing="20.0" style="-fx-background-color: #34495e;" stylesheets="@../styles/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="92.0" prefWidth="242.0" text="Hire Us" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="66.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <ToggleButton fx:id="btnDashBoard" contentDisplay="TOP" graphicTextGap="10.0" layoutX="10.0" layoutY="169.0" mnemonicParsing="false" onAction="#dashBoardOnAction" prefHeight="119.0" prefWidth="364.0" styleClass="tBtn" text="Dashboard" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="VIEW_DASHBOARD" size="40" />
+                     </graphic>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="adminTogleBtn" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="btnOrderItemId" contentDisplay="TOP" graphicTextGap="10.0" layoutX="10.0" layoutY="340.0" mnemonicParsing="false" onAction="#orderItemBrnOnAction" prefHeight="119.0" prefWidth="364.0" styleClass="tBtn" text="Order Item" textFill="WHITE" toggleGroup="$adminTogleBtn" wrapText="true">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="40" text="" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#rentItemBtnOnAction" prefHeight="119.0" prefWidth="364.0" styleClass="tBtn" text="Rent Item" textFill="WHITE" toggleGroup="$adminTogleBtn" wrapText="true">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_ALT" size="40" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton contentDisplay="TOP" graphicTextGap="10.0" layoutX="10.0" layoutY="102.0" mnemonicParsing="false" onAction="#returnCheckBtnOnAction" prefHeight="119.0" prefWidth="364.0" styleClass="tBtn" text="Return Check" textFill="WHITE" toggleGroup="$adminTogleBtn" wrapText="true">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_CHECK_ALT" size="40" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton contentDisplay="TOP" graphicTextGap="10.0" layoutX="10.0" layoutY="221.0" mnemonicParsing="false" onAction="#rentHistoryBtnOnAction" prefHeight="119.0" prefWidth="364.0" styleClass="tBtn" text="Rent History" textFill="WHITE" toggleGroup="$adminTogleBtn" wrapText="true">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HISTORY" size="40" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton contentDisplay="TOP" graphicTextGap="10.0" layoutX="10.0" layoutY="459.0" mnemonicParsing="false" onAction="#addCustomerBtnOnAction" prefHeight="119.0" prefWidth="364.0" styleClass="tBtn" text="Add Customer" textFill="WHITE" toggleGroup="$adminTogleBtn" wrapText="true">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="40" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton contentDisplay="TOP" graphicTextGap="10.0" layoutX="10.0" layoutY="578.0" mnemonicParsing="false" onAction="#logOutBtnOnAction" prefHeight="119.0" prefWidth="364.0" styleClass="tBtn" text="Log Out" textFill="WHITE" toggleGroup="$adminTogleBtn" wrapText="true">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="40" />
+                     </graphic>
+                  </ToggleButton>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <StackPane fx:id="rightStackPane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

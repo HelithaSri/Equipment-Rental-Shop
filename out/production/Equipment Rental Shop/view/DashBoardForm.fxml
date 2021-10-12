@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="1020.0" prefWidth="1630.0" styleClass="anchorBg" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="687.0" prefHeight="290.0" prefWidth="1587.0" styleClass="secondAnchor">
+         <children>
+            <JFXButton fx:id="btnFinancialReport" alignment="CENTER" buttonType="RAISED" cache="true" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="254.0" layoutY="150.0" onMouseClicked="#btnFinancialReportOnAction" prefHeight="100.0" prefWidth="245.0" style="-fx-background-color: #34495e;" text="Financial Report" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Roboto Black" size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnRentalItemInventory" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="540.0" layoutY="150.0" onMouseClicked="#rentalItemInventoryReportOnAction" prefHeight="100.0" prefWidth="245.0" style="-fx-background-color: #34495e;" text="Rental Item Inventory Reports" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Roboto Black" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnCustmerReport" alignment="CENTER" buttonType="RAISED" cache="true" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="1118.0" layoutY="150.0" onMouseClicked="#customerReport" prefHeight="100.0" prefWidth="245.0" style="-fx-background-color: #34495e;" text="Customer Report" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Roboto Black" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="sellingItem" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="829.0" layoutY="150.0" onMouseClicked="#sellingOnAction" prefHeight="100.0" prefWidth="245.0" ripplerFill="BLACK" style="-fx-background-color: #34495e;" text="Selling Item Inventory Reports" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Roboto Black" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXDatePicker fx:id="datePickerFrom" layoutX="489.0" layoutY="51.0" prefHeight="58.0" prefWidth="292.0" promptText="From" />
+            <JFXDatePicker fx:id="datePickerTo" layoutX="827.0" layoutY="54.0" prefHeight="58.0" prefWidth="292.0" promptText="To" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="20.0" layoutY="34.0" prefHeight="132.0" prefWidth="1587.0" styleClass="secondAnchor">
+         <children>
+            <AnchorPane layoutX="811.0" layoutY="20.0" prefHeight="90.0" prefWidth="325.0" style="-fx-background-color: #3498db;" styleClass="rectangle">
+               <children>
+                  <Pane prefHeight="90.0" prefWidth="108.0" style="-fx-background-color: #2980b9;" styleClass="smallRectangle">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="24.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/box.png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <Label alignment="CENTER_RIGHT" layoutX="108.0" layoutY="50.0" prefHeight="24.0" prefWidth="202.0" text="Available Rental Item" textFill="#ebeaea">
+                     <font>
+                        <Font name="Roboto Medium" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAvailableRentalItem" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="107.0" layoutY="9.0" prefHeight="30.0" prefWidth="202.0" text="10" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Black" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="94.0" layoutY="20.0" prefHeight="90.0" prefWidth="325.0" style="-fx-background-color: #e74c3c;" styleClass="rectangle">
+               <children>
+                  <Pane prefHeight="90.0" prefWidth="108.0" style="-fx-background-color: #c0392b;" styleClass="smallRectangle">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/box.png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <Label alignment="CENTER_RIGHT" layoutX="108.0" layoutY="50.0" prefHeight="24.0" prefWidth="202.0" text="Selling Items" textFill="#ebeaea">
+                     <font>
+                        <Font name="Roboto Medium" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSellingItem" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="108.0" layoutY="16.0" prefHeight="30.0" prefWidth="202.0" text="10" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Black" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="454.0" layoutY="20.0" prefHeight="90.0" prefWidth="325.0" style="-fx-background-color: #2ecc71;" styleClass="rectangle">
+               <children>
+                  <Pane prefHeight="90.0" prefWidth="108.0" style="-fx-background-color: #27ae60;" styleClass="smallRectangle">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/box.png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <Label alignment="CENTER_RIGHT" layoutX="108.0" layoutY="51.0" prefHeight="24.0" prefWidth="202.0" text="Rental Item" textFill="#ebeaea">
+                     <font>
+                        <Font name="Roboto Medium" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblRentalItem" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="107.0" layoutY="11.0" prefHeight="30.0" prefWidth="202.0" text="10" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Black" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1170.0" layoutY="20.0" prefHeight="90.0" prefWidth="325.0" style="-fx-background-color: #9b59b6;" styleClass="rectangle">
+               <children>
+                  <Pane prefHeight="90.0" prefWidth="108.0" style="-fx-background-color: #8e44ad;" styleClass="smallRectangle">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="23.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/customer.png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <Label alignment="CENTER_RIGHT" layoutX="108.0" layoutY="50.0" prefHeight="24.0" prefWidth="202.0" text="Customers" textFill="#ebeaea">
+                     <font>
+                        <Font name="Roboto Medium" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCustomers" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="107.0" layoutY="9.0" prefHeight="30.0" prefWidth="202.0" text="10" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Black" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="20.0" layoutY="225.0" prefHeight="400.0" prefWidth="400.0" styleClass="secondAnchor">
+         <children>
+            <PieChart fx:id="pieChart" labelLineLength="10.0" prefHeight="400.0" prefWidth="400.0" title="Most Moveable Renting Items">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </PieChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="454.0" layoutY="225.0" prefHeight="400.0" prefWidth="400.0" styleClass="secondAnchor">
+         <children>
+            <PieChart fx:id="pieChart2" cacheShape="false" focusTraversable="true" labelLineLength="10.0" prefHeight="400.0" prefWidth="401.0" title="Most Moveable Selling Items">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </PieChart>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="42.0" layoutY="165.0" prefHeight="58.0" prefWidth="1545.0" />
+      <Separator layoutX="42.0" layoutY="627.0" prefHeight="58.0" prefWidth="1545.0" />
+      <AnchorPane layoutX="892.0" layoutY="225.0" prefHeight="400.0" prefWidth="712.0" styleClass="secondAnchor">
+         <children>
+            <Separator layoutX="339.0" layoutY="22.0" orientation="VERTICAL" prefHeight="351.0" prefWidth="30.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="23.0" prefHeight="52.0" prefWidth="230.0" text="Monthly Income From Ren Items" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Roboto Black" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="415.0" layoutY="23.0" prefHeight="52.0" prefWidth="230.0" text="Monthly Income From Selling Items" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Roboto Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRentItems" alignment="CENTER" contentDisplay="CENTER" layoutY="153.0" prefHeight="88.0" prefWidth="352.0" text="245060.00" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Roboto Medium" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSellingItems" alignment="CENTER" contentDisplay="CENTER" layoutX="352.0" layoutY="153.0" prefHeight="88.0" prefWidth="360.0" text="245060.00" textAlignment="RIGHT" wrapText="true">
+               <font>
+                  <Font name="Roboto Medium" size="40.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="466.0" layoutX="548.0" layoutY="241.0" opacity="0.06" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/img/icons8-money-64.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="95.0" opacity="0.05" prefWidth="352.0" text="LKR">
+               <font>
+                  <Font name="Roboto Medium" size="170.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="352.0" layoutY="95.0" opacity="0.05" prefHeight="205.0" prefWidth="359.0" text="LKR">
+               <font>
+                  <Font name="Roboto Medium" size="170.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

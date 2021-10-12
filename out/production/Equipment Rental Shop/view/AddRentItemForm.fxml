@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1020.0" prefWidth="1630.0" styleClass="anchorBg" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddRentItemFormController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="40.0" prefHeight="251.0" prefWidth="1590.0" styleClass="secondAnchor" AnchorPane.bottomAnchor="729.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <JFXTextField fx:id="txtSerialNumber" labelFloat="true" layoutX="101.0" layoutY="61.0" onKeyReleased="#onKeyReleased" promptText="Serial Number" AnchorPane.leftAnchor="101.0" AnchorPane.topAnchor="61.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="340.0" layoutY="61.0" onKeyReleased="#onKeyReleased" promptText="Description" AnchorPane.topAnchor="61.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <JFXTextField fx:id="txtRentPrice" labelFloat="true" layoutX="578.0" layoutY="61.0" onKeyReleased="#onKeyReleased" promptText="Rent Price" AnchorPane.topAnchor="61.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <JFXComboBox fx:id="cmbCategory" labelFloat="true" layoutX="815.0" layoutY="61.0" prefWidth="212.0" promptText="Category" AnchorPane.topAnchor="61.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+            <JFXComboBox fx:id="cmbModel" labelFloat="true" layoutX="1053.0" layoutY="61.0" prefWidth="212.0" promptText="Model" AnchorPane.topAnchor="61.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+            <JFXTextField fx:id="txtStatus" editable="false" labelFloat="true" layoutX="1290.0" layoutY="61.0" promptText="Status" text="Available" AnchorPane.rightAnchor="88.0" AnchorPane.topAnchor="61.0" />
+            <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="1298.0" layoutY="146.0" onAction="#addItemBtnOnAction" prefHeight="60.0" prefWidth="203.0" styleClass="greenBtn" text="Add" textFill="WHITE" AnchorPane.rightAnchor="89.0">
+               <font>
+                  <Font name="Roboto Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="815.0" layoutY="146.0" onAction="#clearBtnOnAction" prefHeight="60.0" prefWidth="203.0" styleClass="redClearBtn" text="Clear" textFill="WHITE" AnchorPane.rightAnchor="572.0">
+               <font>
+                  <Font name="Roboto Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="573.0" layoutY="146.0" onAction="#deleteBtn" prefHeight="60.0" prefWidth="203.0" styleClass="redDeleteBtn" text="Delete" textFill="WHITE" AnchorPane.rightAnchor="814.0">
+               <font>
+                  <Font name="Roboto Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="1056.0" layoutY="146.0" onAction="#updateBtn" prefHeight="60.0" prefWidth="203.0" text="Update" textFill="WHITE" AnchorPane.rightAnchor="331.0">
+               <font>
+                  <Font name="Roboto Bold" size="20.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="greenBtn" />
+                  <String fx:value="redClearBtn" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="20.0" layoutY="342.0" prefHeight="644.0" prefWidth="1590.0" styleClass="secondAnchor" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="342.0">
+         <children>
+            <TableView fx:id="tblRent" layoutX="49.0" layoutY="26.0" onMouseClicked="#tableRowSelectOnAction" prefHeight="590.0" prefWidth="1493.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="49.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="26.0">
+              <columns>
+                <TableColumn fx:id="colSerialNumber" prefWidth="250.0" resizable="false" text="Serial Number" />
+                <TableColumn fx:id="colDescription" prefWidth="317.3333740234375" resizable="false" text="Description" />
+                  <TableColumn fx:id="colRentPrice" prefWidth="273.33331298828125" resizable="false" text="Rent Price" />
+                  <TableColumn fx:id="colCategory" prefWidth="241.0" resizable="false" text="Category" />
+                  <TableColumn fx:id="colModel" prefWidth="224.0" resizable="false" text="Model" />
+                  <TableColumn fx:id="colStatus" prefWidth="169.0" resizable="false" text="Status" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

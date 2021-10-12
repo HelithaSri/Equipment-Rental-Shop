@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1020.0" prefWidth="1630.0" styleClass="anchorBg" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCategoryAndModelsFormController">
+   <children>
+      <AnchorPane layoutX="23.0" layoutY="124.0" prefHeight="778.0" prefWidth="778.0" style="-fx-background-color: white; -fx-background-radius: 40;">
+         <children>
+            <JFXButton fx:id="btnCategoryAdd" buttonType="RAISED" layoutX="571.0" layoutY="47.0" onAction="#addCategoryBtn" prefHeight="48.0" prefWidth="159.0" style="-fx-background-color: #2ecc71;" styleClass="greenBtn" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="txtCategoryId" labelFloat="true" layoutX="45.0" layoutY="57.0" onKeyReleased="#categoryOnKeyReleased" promptText="Category Id">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <JFXTextField fx:id="txtCategoryName" labelFloat="true" layoutX="312.0" layoutY="57.0" onKeyReleased="#categoryOnKeyReleased" promptText="Category Name">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <TableView fx:id="tblCategory" layoutX="45.0" layoutY="124.0" prefHeight="519.0" prefWidth="685.0" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="124.0">
+              <columns>
+                <TableColumn fx:id="colCategoryId" maxWidth="3283.333282470703" minWidth="30.0" prefWidth="342.0000305175781" resizable="false" text="Category Id" />
+                <TableColumn fx:id="colCategoryName" maxWidth="3556.666717529297" minWidth="30.0" prefWidth="327.0" resizable="false" text="Category Name" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXTextField fx:id="txtCategorySearch" labelFloat="true" layoutX="46.0" layoutY="696.0" onKeyReleased="#searchCategory" prefHeight="38.0" prefWidth="305.0" promptText="search">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <JFXButton layoutX="571.0" layoutY="688.0" onAction="#categoryClearFieldOnAction" prefHeight="48.0" prefWidth="159.0" style="-fx-background-color: #e74c3c;" styleClass="redClearBtn" text="Clear Field" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnCategoryDelete" layoutX="394.0" layoutY="687.0" onAction="#deleteCategoryBtn" prefHeight="48.0" prefWidth="159.0" style="-fx-background-color: #e74c3c;" styleClass="redClearBtn" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="828.0" layoutY="123.0" prefHeight="778.0" prefWidth="778.0" style="-fx-background-color: white; -fx-background-radius: 40;">
+         <children>
+            <JFXButton fx:id="btnModelAdd" buttonType="RAISED" layoutX="571.0" layoutY="47.0" onAction="#addModelBtn" prefHeight="48.0" prefWidth="159.0" style="-fx-background-color: #2ecc71;" styleClass="greenBtn" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="txtModelId" labelFloat="true" layoutX="45.0" layoutY="57.0" onKeyReleased="#modelOnKeyReleased" promptText="Model Id">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <JFXTextField fx:id="txtCModelName" labelFloat="true" layoutX="312.0" layoutY="57.0" onKeyReleased="#modelOnKeyReleased" promptText="Model Name">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <TableView fx:id="tblModel" layoutX="45.0" layoutY="124.0" prefHeight="519.0" prefWidth="685.0" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="124.0">
+               <columns>
+                  <TableColumn fx:id="colModelId" maxWidth="3283.333282470703" minWidth="30.0" prefWidth="328.3333282470703" resizable="false" text="Model Id" />
+                  <TableColumn fx:id="colModelName" maxWidth="3556.666717529297" minWidth="30.0" prefWidth="341.0" resizable="false" text="Model Name" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXTextField fx:id="txtModelSearch" labelFloat="true" layoutX="46.0" layoutY="696.0" onKeyReleased="#searchModel" prefHeight="38.0" prefWidth="305.0" promptText="search">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <JFXButton layoutX="571.0" layoutY="688.0" onAction="#modelClearFieldOnAction" prefHeight="48.0" prefWidth="159.0" style="-fx-background-color: #e74c3c;" styleClass="redClearBtn" text="Clear Field" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="394.0" layoutY="688.0" onAction="#deleteModelBtn" prefHeight="48.0" prefWidth="159.0" style="-fx-background-color: #e74c3c;" styleClass="redClearBtn" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

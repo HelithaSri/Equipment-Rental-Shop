@@ -1,0 +1,221 @@
+.tBtn {
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-text-fill: white;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.tBtn:selected {
+    -fx-background-color: #EDEFF1;
+    -fx-text-fill: Black;
+    -fx-border-width: 0 0 0 6;
+    /*-fx-border-color: linear-gradient(to right, #CB356B, #BD3F32);*/
+    -fx-border-color: #2ecc71;
+}
+
+.tBtn:selected .glyph-icon {
+    -fx-fill: black;
+}
+
+.anchorBg {
+    -fx-background-color: #EDEFF1;
+}
+
+.text-field {
+    -fx-font-family: "Roboto Medium";
+    -fx-font-size: 20;
+}
+
+
+.combo-box {
+    -fx-font-family: "Roboto Medium";
+    -fx-font-size: 20;
+}
+
+.secondAnchor {
+    -fx-background-color: white;
+    -fx-background-radius: 40;
+}
+
+.redClearBtn {
+    -fx-background-color: #e74c3c;
+    -fx-background-radius: 40;
+    -fx-font-size: 20px;
+    -fx-font-family: "Roboto Black";
+}
+
+.greenBtn {
+    -fx-background-color: #2ecc71;
+    -fx-background-radius: 40;
+    -fx-font-size: 20px;
+    -fx-font-family: "Roboto Black";
+}
+
+.redDeleteBtn {
+    -fx-background-color: #c0392b;
+    -fx-background-radius: 40;
+    -fx-font-size: 20px;
+    -fx-font-family: "Roboto Black";
+}
+
+/*Table Styles Start*/
+.table-view, table-view:focused{
+    -fx-background-insets: 0px;
+    -fx-background-radius: 20px 20px 0px 0px;
+    -fx-padding: 0 0 0 0;
+}
+
+/*.table-view:focused {
+    -fx-background-insets: 0px;
+}*/
+
+.table-view .column-header {
+    -fx-size: 40px;
+    -fx-background-color: #7708f5;
+    -fx-font-size: 20;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+.table-view .table-row-cell:empty {
+    -fx-background-color: white;
+}
+
+.table-view .table-row-cell:selected {
+    /*-fx-background-color:linear-gradient(to right, rgba(119, 8, 245, 0.29), rgba(15, 93, 255, 0.39));*/
+    -fx-background-color: linear-gradient(to right, rgba(0, 198, 255, 0.29), rgba(0, 114, 255, 0.39));
+}
+
+.table-view .table-row-cell:selected * {
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-text-fill: rgb(54, 49, 49);
+}
+
+.table-view .table-cell {
+    -fx-font-size: 15;
+}
+
+.table-view .column-header-background {
+    /*-fx-background-color: #7708f5;*/
+    -fx-background-color: linear-gradient(to right, #1e3c72, #2a5298);
+    -fx-background-radius: 20px 20px 0px 0px;
+    -fx-background-insets: 0 0 0 0;
+    -fx-padding: 10 0 10px 0;
+
+}
+
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+
+.column-header {
+    -fx-sort-icon-display: LEFT;
+}
+
+.table-view .arrow {
+    -fx-background-color: white;
+}
+
+/*  Hide Horizontal Scroll Bar On Table  */
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-arrow,
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+.table-view .virtual-flow .scroll-bar:horizontal .track{
+    -fx-background-insets: -1px;
+}
+
+.table-view .column-header-background .filler{
+    -fx-opacity: 0;
+}
+
+/*  Table Styles End  */
+
+/*-------------------------------*/
+
+
+
+
+
+/*
+.jfx-text-field{
+    -fx-prompt-text-fill: #e79f0e;
+    -fx-font-size: 20;
+    -fx-font-family: "Roboto Black";
+    -fx-text-fill: red;
+}
+
+/*.jfx-combo-box{
+    -fx-prompt-text-fill: #e79f0e;
+    -fx-font-size: 20;
+    -fx-font-family: "Roboto Black";
+
+    -fx-backgroundcolor: #ADD8E6;
+    -fx-focus-color: midnightblue;
+    -fx-faint-focus-color: #ADD8E6;
+    -fx-control-inner-background: #ADD8E6;
+    -fx-selection-bar: midnightblue;
+}
+
+.jfx-combo-box .list-cell:filled:selected .text{
+    -fx-fill: red;
+}
+
+.jfx-combo-box .choice-box{
+    -fx-backgroundcolor: #ADD8E6;
+    -fx-focus-color: midnightblue;
+    -fx-faint-focus-color: #ADD8E6;
+    -fx-control-inner-background: #ADD8E6;
+    -fx-selection-bar: midnightblue;
+}
+
+.choice-box .menu-item:focused .label{
+    -fx-text-fill: white;
+}*/
+
+.chart-pie-label-line {
+    -fx-stroke: #8b4513;
+    -fx-fill: #8b4513;
+}
+
+.chart-pie-label { /*Change labels*/
+    -fx-fill: #8b4513;
+    -fx-font-size: 1em;
+}
+.chart-legend {
+    -fx-background-color: rgba(250, 250, 210, 0);
+    -fx-stroke: #daa520;
+}
+.chart .chart-title .text{
+    -fx-font-size: 20;
+    -fx-font-family: "Roboto Black";
+}
+
+.rectangle{
+    -fx-background-radius: 20;
+}
+.smallRectangle{
+    -fx-background-radius: 20 0 0 20;
+}
+
+/*-------------------------------*/
+.jfx-date-picker:editable .date-picker-display-node{
+    -jfx-label-float: true;
+}

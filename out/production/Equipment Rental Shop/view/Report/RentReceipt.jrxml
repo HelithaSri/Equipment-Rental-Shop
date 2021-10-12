@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RentReceipt" pageWidth="595" pageHeight="700" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bba4de9b-c8cc-4fe8-a905-0dc31a16c661">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="Total" class="java.lang.String"/>
+	<parameter name="Rent ID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="serialNumber" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="customerId" class="java.lang.String"/>
+	<field name="oneDayPrice" class="java.lang.Double"/>
+	<field name="returnDate" class="java.lang.String"/>
+	<field name="totalDay" class="java.lang.Integer"/>
+	<field name="price" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="112" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="2" width="555" height="47" uuid="82536d30-d287-4c0c-9d40-93b37d9f21ea"/>
+				<imageExpression><![CDATA["D:/IJSE/Projects/coursework/Equipment Rental Shop/src/assets/img/If .png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="51" width="555" height="30" forecolor="#3B3939" uuid="3773128c-cb99-4a74-bb1a-53598a5c619a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto Black" size="19" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Rent Receipt]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="313" y="82" width="110" height="30" uuid="5134f4a5-33d8-4b16-8874-b60cbbf433ee"/>
+				<textElement textAlignment="Left">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="153" y="82" width="155" height="30" uuid="425b6393-e640-4113-ae34-fdb8e92a2f24"/>
+				<textElement textAlignment="Right">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="2" width="100" height="30" uuid="454a1d59-9d10-4fd7-8e9c-ebb258a35858"/>
+				<textElement>
+					<font fontName="Roboto Black" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Rent ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="81" height="30" uuid="46a06e1e-5e04-4980-9435-feff03689761">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af3fcb53-98fc-415a-bd44-34e9b978065f"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto Black" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Serial Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="0" width="79" height="30" uuid="9d5db5b5-d7e0-47ec-a473-99442eaeaf74">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f03430e8-4718-4043-a706-66b72f8c66b3"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto Black" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="79" height="30" uuid="7e58843d-521c-48fb-b867-134a1f318591">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bfe2351f-9dd5-4e07-918d-ae50674b6397"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto Black" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Customer ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="0" width="79" height="30" uuid="e4b4e6db-adb3-41f4-a2df-0fa83f9370bf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e6c73544-1d82-4756-ab42-c5f8eb009670"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto Black" isBold="false"/>
+				</textElement>
+				<text><![CDATA[One Day Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="79" height="30" uuid="bf83049a-6980-41a9-9db1-5d3a2abb3103">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="912aaae9-f224-43b6-9a2a-0513b1b42c9a"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto Black" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Return Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="0" width="79" height="30" uuid="8016b470-7ee6-4c8f-9e65-07ecb9191c7f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="32aca237-3647-4cdb-b180-6d0fe4ee3eb6"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto Black" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Day]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="79" height="30" uuid="6ad881da-1ee1-4b51-8b24-3cf33eff8e22">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2af89745-deb4-4236-a214-4c9b491148d6"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto Black" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="81" height="30" uuid="3fe89c33-0add-49d8-93e2-0fe044a6fe57">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af3fcb53-98fc-415a-bd44-34e9b978065f"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serialNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="0" width="79" height="30" uuid="90488f6d-e1cc-4a0e-959a-52b0d2dc7049">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f03430e8-4718-4043-a706-66b72f8c66b3"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="79" height="30" uuid="44f8dd9c-b9db-4378-a8e9-2b2520f8023f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bfe2351f-9dd5-4e07-918d-ae50674b6397"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customerId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="0" width="79" height="30" uuid="1a39e0f4-f5d8-4d9a-ba98-baecfa2edd4d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e6c73544-1d82-4756-ab42-c5f8eb009670"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oneDayPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="0" width="79" height="30" uuid="968832b3-d25d-415d-8034-d43609096fad">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="912aaae9-f224-43b6-9a2a-0513b1b42c9a"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{returnDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="0" width="79" height="30" uuid="f287d39f-8bb7-4b49-a210-30caa13f8990">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="32aca237-3647-4cdb-b180-6d0fe4ee3eb6"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalDay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="79" height="30" uuid="ddf9bac0-89aa-45a6-adfa-4b6632feb74e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2af89745-deb4-4236-a214-4c9b491148d6"/>
+				</reportElement>
+				<box rightPadding="7">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="10" uuid="bfa1d4d7-955c-4618-8c5b-ec63a5653446"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="8"/>
+				</textElement>
+				<text><![CDATA[© 2021 - 2021 Helitha Sri - All Rights Reserved.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="456" y="10" width="94" height="21" uuid="f793fc18-a63d-4d9e-92b0-dfbc1e28c433"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Roboto Black" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="390" y="10" width="66" height="21" uuid="57d38783-e748-4aa3-934d-fea413b2f8a2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Roboto Black" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Cost :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="20" width="239" height="40" uuid="1f9a4124-3bf8-40a0-b121-dbc32e570883"/>
+				<textElement>
+					<font fontName="Roboto" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Contact No 	 : 076-7059199
+Email		 : hireus@rental.com
+Addres		 : 411/4 Dorawaka, Warakapola.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="0" y="-82" width="555" height="142" forecolor="rgba(181, 177, 177, 0.23529412)" uuid="976e2ed9-4669-43de-b787-d1a58151b834"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto Black" size="99" isBold="true"/>
+				</textElement>
+				<text><![CDATA[R E N T]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
