@@ -109,4 +109,5 @@ public class UserReturnCheckServiceController {
                 ("UPDATE rent_item SET Status ='" + status + "' WHERE SerialNumber='" + serialNumber + "'");
         return stm.executeUpdate() > 0;
     }
+
 }

@@ -102,7 +102,6 @@ public class UserReturnCheckFormController {
         secondColRentDate.setCellValueFactory(new PropertyValueFactory<>("rentDate"));
         secondColReturnDate.setCellValueFactory(new PropertyValueFactory<>("returnDate"));
         secondColFine.setCellValueFactory(new PropertyValueFactory<>("total"));
-
     }
 
     /*   selected items in first table load to below Fields & cmb   */
