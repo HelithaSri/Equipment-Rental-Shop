@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="rent">
+    <output-path>$PROJECT_DIR$/out/artifacts/rent</output-path>
+    <root id="archive" name="rent.jar">
+      <element id="module-output" name="Equipment Rental Shop" />
+      <element id="library" level="project" name="AnimateFX-1.2.1" />
+    </root>
+  </artifact>
+</component>
