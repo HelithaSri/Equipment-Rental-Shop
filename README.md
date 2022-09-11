@@ -6,6 +6,11 @@
 ![Logging Screen](Screenshots/Screenshot%20(454).png)
 ![Admin Panel](Screenshots/Screenshot%20(455).png)
 ![Cashier Panel](Screenshots/Screenshot%20(456).png)
+<br/>
+<br/>
+## Watch Video
+[![Watch the video](https://img.youtube.com/vi/AOOtSrvHdgI/maxresdefault.jpg)](https://youtu.be/AOOtSrvHdgI)
+
 
 ## Cashier Functionalities
 * View existing rental and sales items are displayed
